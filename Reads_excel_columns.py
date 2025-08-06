@@ -307,6 +307,7 @@ try:
             
             # Kombiniere die Ergebnisse mit der Gesamtzeile
             hauptthema_analysis = pd.concat([hauptthema_counts, gesamt_row], ignore_index=True)
+            hauptthema_analysis['Summe'] = hauptthema_analysis['Summe'].astype(int)
             
             print(f"Hauptthema Analyse Ergebnis:")
             print(hauptthema_analysis.head(15))
